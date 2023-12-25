@@ -1,4 +1,3 @@
-from turtle import width
 import pandas as pd
 import plotly.express as px
 import streamlit as st
@@ -14,7 +13,7 @@ def make_columns(number_cols, images_array, user_names=None):
         with cols[i]: 
             user_name = user_names[i].split("/")
             user_name = user_name[-1]
-            st.image(images_array[i], use_column_width = True)    
+            st.image(images_array[i])    
             st.markdown(f"[{user_name}]({user_names[i]})")
 
 def show_code(toogle_boolean, code):
